@@ -260,14 +260,14 @@
       "id": "ps1/jackie-chan-stuntmaster",
       "name": "Jackie Chan: Stuntmaster",
       "platform": "PS1",
-      "status": "PARTIAL_CANDIDATE_V11",
-      "status_th": "v11: UI 137 + ซับ 103 ยังไม่ครบเกม",
-      "next_action_th": "ตรวจคำคาดเดา MAKING_047, ข้อความที่ยังไม่สำรวจ และเซฟ/โหลด",
-      "problems_th": "MAKING_047 เป็นคำคาดเดา; ยังไม่ตรวจเส้นเรื่องปกติทุก FMV และเซฟ/โหลด; คลังทั้งเกมไม่ครบ",
+      "status": "PARTIAL_CANDIDATE_V12",
+      "status_th": "v12: UI 137 + ซับ 103 + โหลดไทย; เซฟ/โหลดช่องแรกผ่าน",
+      "next_action_th": "ตรวจและแปลเสียงพูดที่แยกไว้ ทำซับในเกม และตรวจเส้นเรื่อง/เซฟหลังเล่นต่อ",
+      "problems_th": "เสียง 3,051 ชิ้นยังไม่ใช่จำนวนประโยค; ซับเสียงพูดในเกมยังไม่ทำ; MAKING_047 คาดเดา; ยังไม่ตรวจครบทุกด่านและเซฟหลังเล่นต่อ",
       "audit_date": "2026-10-14",
       "evidence_path": "games/ps1/jackie-chan-stuntmaster/CHECKPOINT.md",
       "full_game_translation_verified": false,
-      "evidence_summary_th": "v11: UI 137 + ซับ 103 ยังไม่ครบเกม",
+      "evidence_summary_th": "v12: UI 137 + ซับ 103 + โหลดไทย; เซฟ/โหลดช่องแรกผ่าน",
       "progress": {
         "overall": {
           "completed": null,
@@ -365,9 +365,9 @@
       }
     }
   ],
-  "catalog_sha256": "9f1cb144288520c8f0597f036491fc8988be87e8a715d17725654855c119f7ff",
-  "source_commit": "88379ca35a45d741659e562ebab285f0d84391fc",
-  "source_updated_at": "2026-10-14T13:25:32+07:00",
+  "catalog_sha256": "324f554a70e5dae65d4bb8a2d6c81b55964b2f959f3f0855f862399f84b45664",
+  "source_commit": "b43c44b451a64a6b6304a68e18a08b6d03ce5877",
+  "source_updated_at": "2026-10-14T15:34:30+07:00",
   "sync_interval_minutes": 5,
   "snapshot_policy_th": "ซิงก์จาก GitHub main ทุก 5 นาทีเมื่อมีข้อมูลเปลี่ยน; อาจล่าช้าตามคิว GitHub Actions เว็บตรวจข้อมูลใหม่ทุก 60 วินาทีขณะเปิด",
   "metrics_policy_th": "เปอร์เซ็นต์เฉพาะชุดที่ระบุ ไม่ใช่ทั้งเกม ร่างแปลไม่ใช่การอนุมัติ — หมายถึงไม่มีตัวหารที่ตรวจแล้ว ไม่ใช่ 0%",
