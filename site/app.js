@@ -56,7 +56,7 @@ async function refreshStatus() {
  try {
   const response=await fetch('status.json?t='+Date.now(),{cache:'no-store'});if(!response.ok)throw Error('HTTP '+response.status);
   const next=await response.json();if(next.schema_version!==1||!Array.isArray(next.projects))throw Error('Unsupported catalog');
-  if(next.catalog_sha256!==data.catalog_sha256 || next.source_commit!==data.source_commit){
+  if(next.catalog_sha256!==data.catalog_sha256 || next.source_commit!==data.source_commit || next.sync_active!==data.sync_active || next.sync_state_th!==data.sync_state_th){
    data=next;const real=data.projects.filter(p=>category(p)!=='fixture');
    $('#game-count').textContent=real.length;$('#partial-count').textContent=real.filter(p=>category(p)==='partial').length;$('#blocked-count').textContent=real.filter(p=>category(p)==='blocked').length;$('#complete-count').textContent=real.filter(p=>p.full_game_translation_verified).length;$('#audit-date').textContent=data.audited;
    render();if(activeDetail && $('#details').open)showDetails(activeDetail);

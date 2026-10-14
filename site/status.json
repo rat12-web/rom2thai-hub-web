@@ -366,11 +366,11 @@
     }
   ],
   "catalog_sha256": "9f1cb144288520c8f0597f036491fc8988be87e8a715d17725654855c119f7ff",
-  "source_commit": "4478e0c637b16b3965f0a13867de18f4d4caf0e8",
-  "source_updated_at": "2026-10-14T13:13:12+07:00",
+  "source_commit": "fdef2117ae3d6e3660792a7b5dab5ac50a49d767",
+  "source_updated_at": "2026-10-14T13:19:55+07:00",
   "sync_interval_minutes": 5,
-  "snapshot_policy_th": "snapshot จาก GitHub main; sync Hub อัตโนมัติรออนุมัติสิทธิ์อ่าน repo ส่วนตัว เว็บตรวจ snapshot ใหม่ทุก 60 วินาที",
+  "snapshot_policy_th": "ซิงก์จาก GitHub main ทุก 5 นาทีเมื่อมีข้อมูลเปลี่ยน; อาจล่าช้าตามคิว GitHub Actions เว็บตรวจข้อมูลใหม่ทุก 60 วินาทีขณะเปิด",
   "metrics_policy_th": "เปอร์เซ็นต์เฉพาะชุดที่ระบุ ไม่ใช่ทั้งเกม ร่างแปลไม่ใช่การอนุมัติ — หมายถึงไม่มีตัวหารที่ตรวจแล้ว ไม่ใช่ 0%",
-  "sync_active": false,
-  "sync_state_th": "snapshot ปัจจุบัน · sync อัตโนมัติรออนุมัติสิทธิ์อ่าน Hub"
+  "sync_active": true,
+  "sync_state_th": "ซิงก์ Hub ทุก 5 นาที"
 }
