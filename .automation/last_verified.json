@@ -1,0 +1,6 @@
+{
+  "week": "2026-W42",
+  "verified_at": "2026-10-14T06:27:56.705027+00:00",
+  "source_commit": "88379ca35a45d741659e562ebab285f0d84391fc",
+  "reason": "Successful read/export; weekly activity prevents idle schedule expiry"
+}
