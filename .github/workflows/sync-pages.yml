@@ -36,6 +36,7 @@ jobs:
           path: _hub_source
           sparse-checkout-cone-mode: false
           sparse-checkout: |
+            /.gitmodules
             /docs/PROJECT_STATUS.json
             /dashboard/index.html
             /dashboard/style.css

@@ -2,10 +2,12 @@
 
 **https://rat12-web.github.io/rom2thai-hub-web/**
 
-Current sync state: **WAITING_FOR_OWNER_APPROVAL_OF_PRIVATE_READ_SCOPE**.
-Initial sanitized snapshot is published; no private deploy key installed yet.
-Auto-review rejected the persistent private-repository read scope. The prepared
-workflow skips private checkout until the explicitly authorized secret is set.
+Private read scope was explicitly approved by the owner on 2026-10-14.
+A repository-scoped read-only deploy key and `HUB_READ_SSH_KEY` Actions secret
+are installed. The key can read the whole private Hub; sparse checkout and public
+allowlists restrict the workflow output to the status catalog and four UI assets.
+The key cannot write to the private Hub. Real workflow evidence is in
+[docs/QA_REPORT.json](docs/QA_REPORT.json).
 
 Public, sanitized status dashboard. Authoritative source:
 `rat12-web/thai-rom-cloud/main` (private). No ROM, BIOS, inventories,
