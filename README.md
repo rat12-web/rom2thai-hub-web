@@ -9,6 +9,13 @@ allowlists restrict the workflow output to the status catalog and four UI assets
 The key cannot write to the private Hub. Real workflow evidence is in
 [docs/QA_REPORT.json](docs/QA_REPORT.json).
 
+**Authenticated cloud sync verified:** private read → allowlisted export → public
+bot commit → Pages deploy → actual HTTP 200/Chrome desktop/mobile.
+[Successful run](https://github.com/rat12-web/rom2thai-hub-web/actions/runs/38521776101).
+The first read-only checkout run failed because credential cleanup requested an
+uncached `.gitmodules` blob; sparse checkout now includes that metadata privately.
+It is never exported. No need to keep the owner's Windows machine running.
+
 Public, sanitized status dashboard. Authoritative source:
 `rat12-web/thai-rom-cloud/main` (private). No ROM, BIOS, inventories,
 original game scripts, credentials or private caches in this repository/site.
