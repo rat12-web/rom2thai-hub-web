@@ -28,8 +28,10 @@ repository. No private Actions runners, paid APIs or external sync server requir
 
 Open browsers check status.json every 60 seconds and on returning to the tab.
 Sync is eventual, not instantaneous; GitHub scheduled runs can be delayed.
-GitHub may disable schedules after 60 days of repository inactivity: re-enable
-the workflow if needed. See Actions for failures; old data remains dated/hash-locked.
+A tiny weekly activity marker is committed after successful Hub read/export to
+keep the public repository active during quiet translation periods (GitHub may
+disable public schedules after 60 idle days). It contains only a week/time/source
+commit and is not uploaded to Pages. See Actions for failures; old data stays dated.
 The visible source commit links to the private Hub for authorized owners.
 
 Unknown percentages remain unknown; scoped pilot/draft counts are not whole-game

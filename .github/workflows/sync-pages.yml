@@ -52,7 +52,8 @@ jobs:
         id: changed
         if: env.HUB_SYNC_ENABLED == 'true'
         run: |
-          git add -- site/index.html site/style.css site/readability.css site/app.js site/status.json
+          python3 scripts/keepalive.py
+          git add -- site/index.html site/style.css site/readability.css site/app.js site/status.json .automation/last_verified.json
           if git diff --cached --quiet; then
             echo 'changed=false' >> "$GITHUB_OUTPUT"
           else
