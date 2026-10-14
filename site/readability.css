@@ -1,0 +1,66 @@
+/* Shared desktop/mobile reading sizes. Console colors remain distinct from status badges. */
+:root { font-size: 16px; }
+.sync-note { font-size:14px; line-height:1.9; color:#5c7068; margin:-15px 0 25px; overflow-wrap:anywhere; }
+.sync-note a { color:#087d69; text-decoration:underline; }
+.brand small, .side-label, .side-bottom code, .eyebrow { font-size: 12px; }
+.nav, .side-bottom, .topbar, .repo-link { font-size: 15px; }
+.nav b, .snapshot, .snapshot b { font-size: 13px; }
+h1 { font-size: 40px; }
+.intro p, .stat > span { font-size: 16px; }
+.stat small, .section-head p, .fixture-toggle, footer, .text-button { font-size: 13px; }
+.explanation strong { font-size: 16px; }
+.explanation p { font-size: 15px; line-height: 1.9; }
+h2 { font-size: 24px; }
+#result-count, .button, .view-switch button span { font-size: 14px; }
+.search input, select { font-size: 16px; }
+.search, select { height: 48px; }
+.view-switch button, .platforms button { font-size: 14px; }
+.cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.game-card { border-top: 5px solid var(--console-color, #718176); padding: 24px; }
+.game-card h3 { font-size: 24px; min-height: 64px; }
+.game-id { font-size: 12px; }
+.console { font-size: 13px; font-weight: 600; color: var(--console-color, #4e6656); background: var(--console-tint, #f1f5ee); border-color: var(--console-border, #d7e2d2); }
+.badge { font-size: 12px; }
+.metric-label { font-size: 13px; }
+.metric-value { font-size: 30px; }
+.scope { font-size: 13px; color: #63756a; min-height: 42px; }
+.metrics { gap: 14px; }
+.rail { height: 6px; }
+.rail span { background: var(--console-color, #469677); }
+.metric-value:not(.unknown) { color: var(--console-color, #256950); }
+.card-status { font-size: 16px; min-height: 58px; }
+.next-line, .problem-line { font-size: 15px; line-height: 1.9; }
+.next-line span, .problem-line span { font-size: 13px; }
+.card-footer { font-size: 12px; }
+.card-footer button { font-size: 15px; padding: 10px 0; }
+table { font-size: 15px; min-width: 1660px; }
+th { font-size: 14px; }
+td:first-child { min-width: 255px; }
+td { min-width: 150px; }
+td:nth-last-child(-n+3) { min-width: 220px; max-width: 280px; }
+.table-name { font-size: 19px; }
+td .metric-value { font-size: 26px; }
+dialog h2 { font-size: 30px; }
+dialog h3, .detail-metric strong { font-size: 17px; }
+dialog p, .detail-metric p, .evidence-link { font-size: 16px; }
+dialog code, dialog pre { font-size: 13px; }
+[data-console="sfc"], [data-platform="SNES"] { --console-color:#6b42b1; --console-tint:#f2ecfb; --console-border:#d5c5eb; }
+[data-console="gba"], [data-platform="GBA"] { --console-color:#245eae; --console-tint:#eaf2ff; --console-border:#bfd2ef; }
+[data-console="gb"], [data-platform="GB / GBC"] { --console-color:#537022; --console-tint:#f0f5df; --console-border:#ccdca3; }
+[data-console="ps1"], [data-platform="PS1"] { --console-color:#b14b27; --console-tint:#fff0e6; --console-border:#f0c9b2; }
+[data-console="homebrew"] { --console-color:#367479; --console-tint:#e8f5f3; --console-border:#bdddda; }
+.platforms button:not([data-platform="all"]) { color:var(--console-color); border-color:var(--console-border); background:var(--console-tint); }
+.platforms button:not([data-platform="all"])[aria-pressed="true"] { color:white; background:var(--console-color); border-color:var(--console-color); }
+@media(min-width:1600px) { .cards { grid-template-columns:repeat(3,minmax(0,1fr)); } }
+@media(max-width:1180px) { .cards { grid-template-columns:1fr; } }
+@media(max-width:780px) {
+  .sidebar { height:72px; } .brand { font-size:18px; } .brand small { font-size:10px; }
+  h1 { font-size:32px; } .intro { flex-wrap:wrap; } .intro p { font-size:16px; max-width:none; }
+  .snapshot, .snapshot b { font-size:13px; } .explanation p { font-size:15px; }
+  .stat small { font-size:13px; } .section-head { flex-wrap:wrap; gap:12px; }
+  .search input, select { font-size:16px; } .game-card { padding:21px; }
+  .game-card h3 { font-size:24px; min-height:0; } .metric-value { font-size:28px; }
+  .metrics { gap:10px; } .scope { font-size:12px; }
+  .card-status { min-height:0; } footer { flex-wrap:wrap; }
+}
+@media(max-width:510px) { .card-top { flex-wrap:wrap; } .card-footer { flex-wrap:wrap; } }

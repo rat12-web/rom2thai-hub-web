@@ -1,0 +1,73 @@
+name: Sync private Hub status and publish Pages
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/sync-pages.yml', 'scripts/**']
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: hub-pages-sync
+  cancel-in-progress: false
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    env:
+      HUB_SYNC_ENABLED: ${{ secrets.HUB_READ_SSH_KEY != '' }}
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - name: Checkout public mirror
+        uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+      - name: Read private Hub using read-only deploy key
+        if: env.HUB_SYNC_ENABLED == 'true'
+        uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+        with:
+          repository: rat12-web/thai-rom-cloud
+          ref: main
+          ssh-key: ${{ secrets.HUB_READ_SSH_KEY }}
+          persist-credentials: false
+          path: _hub_source
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /docs/PROJECT_STATUS.json
+            /dashboard/index.html
+            /dashboard/style.css
+            /dashboard/readability.css
+            /dashboard/app.js
+      - name: Test public allowlist
+        run: python3 -m unittest discover -s scripts -p 'test_export_status.py'
+      - name: Export private status only when authorized
+        if: env.HUB_SYNC_ENABLED == 'true'
+        run: |
+          python3 scripts/export_status.py --source _hub_source --output site --sync-active
+      - name: Commit changed public assets only
+        id: changed
+        if: env.HUB_SYNC_ENABLED == 'true'
+        run: |
+          git add -- site/index.html site/style.css site/readability.css site/app.js site/status.json
+          if git diff --cached --quiet; then
+            echo 'changed=false' >> "$GITHUB_OUTPUT"
+          else
+            git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'Sync sanitized Hub status and web assets'
+            git push origin HEAD:main
+            echo 'changed=true' >> "$GITHUB_OUTPUT"
+          fi
+      - name: Check deployment contains only allowed files and fields
+        run: python3 scripts/validate_site.py site
+      - name: Upload ONLY five public site files
+        if: steps.changed.outputs.changed == 'true' || github.event_name != 'schedule'
+        uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3
+        with:
+          path: site
+          retention-days: 1
+      - name: Deploy GitHub Pages
+        id: deploy
+        if: steps.changed.outputs.changed == 'true' || github.event_name != 'schedule'
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4

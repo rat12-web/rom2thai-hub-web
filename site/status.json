@@ -1,0 +1,376 @@
+{
+  "schema_version": 1,
+  "repository": "rat12-web/thai-rom-cloud",
+  "branch": "main",
+  "audited": "2026-10-14",
+  "projects": [
+    {
+      "id": "sfc/lufia2",
+      "name": "Lufia II",
+      "platform": "SNES",
+      "status": "PARTIAL_WITH_RENDER_DEFECTS",
+      "status_th": "ยังไม่เสร็จ: ต้นเกมข้อความเพี้ยน",
+      "next_action_th": "แก้สคริปต์แผนที่ต้นเกมและตรวจคำแปลที่เสีย",
+      "problems_th": "ต้นเกมและแผนที่ 2–18 อ่านไม่รู้เรื่อง; อย่างน้อย 295 ร่างต้องตรวจใหม่; เมนูยังเป็นอังกฤษ",
+      "audit_date": "2026-10-14",
+      "evidence_path": "games/sfc/lufia2/docs/PLAYTEST_REPORT.md",
+      "full_game_translation_verified": false,
+      "evidence_summary_th": "ยังไม่เสร็จ: ต้นเกมข้อความเพี้ยน",
+      "progress": {
+        "overall": {
+          "completed": null,
+          "total": null,
+          "scope_th": "ทั้งเกม",
+          "basis_th": "ยังไม่มีจำนวนรวมและการตรวจครอบคลุมทั้งเกม; ไม่คำนวณจากค่าเฉลี่ยของ pilot",
+          "evidence_path": "games/sfc/lufia2/docs/PLAYTEST_REPORT.md"
+        },
+        "patch": {
+          "completed": null,
+          "total": null,
+          "scope_th": "แพตช์ทั้งเกม",
+          "basis_th": "มีหลักฐานบางขั้นตอน แต่ไม่มีตัวหารงานแพตช์ทั้งเกมที่ตรวจแล้ว",
+          "evidence_path": "games/sfc/lufia2/docs/PLAYTEST_REPORT.md"
+        },
+        "translation": {
+          "completed": 980,
+          "total": 980,
+          "scope_th": "ร่างชุดบทสนทนา",
+          "basis_th": "ร่างมีครบ 980 แถวในชุดที่เตรียมเท่านั้น; ≥295 แถวต้องตรวจใหม่ ไม่ใช่ผ่าน review/ทั้งเกม",
+          "evidence_path": "games/sfc/lufia2/docs/PLAYTEST_REPORT.md"
+        }
+      }
+    },
+    {
+      "id": "gba/advance-wars",
+      "name": "Advance Wars",
+      "platform": "GBA",
+      "status": "BLOCKED_PRIVATE_WORKSHEET_AND_ALIGNMENT",
+      "status_th": "ติดขัด: ขาดตารางแปลส่วนตัวและต้องซ่อมแถว",
+      "next_action_th": "กู้ตารางแปลจากเครื่องเจ้าของและตรวจ ID/แฮชก่อนสร้างแพตช์",
+      "problems_th": "ตารางแปลส่วนตัวไม่อยู่ใน Git; แถวคลาดเคลื่อน; ฟอนต์ hook และ relocation ยังไม่ครบ",
+      "audit_date": "2026-10-14",
+      "evidence_path": "games/gba/advance-wars/imported/TRANSLATION_SUMMARY.md",
+      "full_game_translation_verified": false,
+      "evidence_summary_th": "ติดขัด: ขาดตารางแปลส่วนตัวและต้องซ่อมแถว",
+      "progress": {
+        "overall": {
+          "completed": null,
+          "total": null,
+          "scope_th": "ทั้งเกม",
+          "basis_th": "ยังไม่มีจำนวนรวมและการตรวจครอบคลุมทั้งเกม; ไม่คำนวณจากค่าเฉลี่ยของ pilot",
+          "evidence_path": "games/gba/advance-wars/imported/TRANSLATION_SUMMARY.md"
+        },
+        "patch": {
+          "completed": null,
+          "total": null,
+          "scope_th": "แพตช์ทั้งเกม",
+          "basis_th": "มีหลักฐานบางขั้นตอน แต่ไม่มีตัวหารงานแพตช์ทั้งเกมที่ตรวจแล้ว",
+          "evidence_path": "games/gba/advance-wars/imported/TRANSLATION_SUMMARY.md"
+        },
+        "translation": {
+          "completed": 5688,
+          "total": 5826,
+          "scope_th": "แถว worksheet ที่รายงาน",
+          "basis_th": "อ้างรายงานเดิมเท่านั้น; ไฟล์แปลส่วนตัวไม่อยู่ใน Hub จึงยังตรวจยืนยันร่างทั้งหมดซ้ำไม่ได้",
+          "evidence_path": "games/gba/advance-wars/imported/TRANSLATION_SUMMARY.md"
+        }
+      }
+    },
+    {
+      "id": "gba/pokemon-radical-red",
+      "name": "Pokémon Radical Red 4.1",
+      "platform": "GBA",
+      "status": "PARTIAL_PILOT",
+      "status_th": "แพตช์ทดลองบางส่วน",
+      "next_action_th": "ตรวจคลังข้อความและเพิ่มการใส่กลับพร้อมฟอนต์ในเกมจริง",
+      "problems_th": "คลังยังไม่ใช่จำนวนทั้งเกม; ฟอนต์ทุกทางแยกและเซฟ/โหลดยังไม่ตรวจ; เมนูบางส่วนยังเป็นอังกฤษ",
+      "audit_date": "2026-10-14",
+      "evidence_path": "games/gba/pokemon-radical-red/docs/RADICAL_RED_HANDOFF.md",
+      "full_game_translation_verified": false,
+      "evidence_summary_th": "แพตช์ทดลองบางส่วน",
+      "progress": {
+        "overall": {
+          "completed": null,
+          "total": null,
+          "scope_th": "ทั้งเกม",
+          "basis_th": "ยังไม่มีจำนวนรวมและการตรวจครอบคลุมทั้งเกม; ไม่คำนวณจากค่าเฉลี่ยของ pilot",
+          "evidence_path": "games/gba/pokemon-radical-red/docs/RADICAL_RED_HANDOFF.md"
+        },
+        "patch": {
+          "completed": 62,
+          "total": 82,
+          "scope_th": "ใส่ร่างเข้า pilot",
+          "basis_th": "62 guarded edits ใส่ใน pilot เทียบกับ 82 ร่างที่มี; ไม่ได้ตรวจทุกแถวบนจอหรือทุกทางแยก",
+          "evidence_path": "games/gba/pokemon-radical-red/docs/RADICAL_RED_HANDOFF.md"
+        },
+        "translation": {
+          "completed": 82,
+          "total": 4962,
+          "scope_th": "คลังที่สำรวจแล้ว",
+          "basis_th": "82 ร่างจาก 4,962 รายการที่ต้องแปลภายใต้นโยบายคงชื่อ; จำนวนนี้ไม่ใช่ทั้งเกม",
+          "evidence_path": "games/gba/pokemon-radical-red/docs/CURRENT_LOCALIZATION.md"
+        }
+      }
+    },
+    {
+      "id": "gba/pokemon-emerald",
+      "name": "Pokémon Emerald",
+      "platform": "GBA",
+      "status": "PARTIAL_PILOT",
+      "status_th": "ทดลอง 15 ข้อความ ยังไม่ครบเกม",
+      "next_action_th": "ขยายข้อความและตรวจสระวรรณยุกต์ในอีมูเลเตอร์",
+      "problems_th": "มีหลักฐานเฉพาะ 15 ข้อความต้นเกม; ยังไม่ตรวจสระวรรณยุกต์ทุกชุดและทุกฉาก",
+      "audit_date": "2026-10-14",
+      "evidence_path": "games/gba/pokemon-emerald/docs/EMERALD_PREVIEW.md",
+      "full_game_translation_verified": false,
+      "evidence_summary_th": "ทดลอง 15 ข้อความ ยังไม่ครบเกม",
+      "progress": {
+        "overall": {
+          "completed": null,
+          "total": null,
+          "scope_th": "ทั้งเกม",
+          "basis_th": "ยังไม่มีจำนวนรวมและการตรวจครอบคลุมทั้งเกม; ไม่คำนวณจากค่าเฉลี่ยของ pilot",
+          "evidence_path": "games/gba/pokemon-emerald/docs/EMERALD_PREVIEW.md"
+        },
+        "patch": {
+          "completed": 15,
+          "total": 15,
+          "scope_th": "ข้อความชุดทดลอง",
+          "basis_th": "เฉพาะ bounded Compact A pilot และหลักฐาน mGBA บางฉาก; ไม่ใช่ทุกหน้าจอ",
+          "evidence_path": "games/gba/pokemon-emerald/docs/EMERALD_PREVIEW.md"
+        },
+        "translation": {
+          "completed": 15,
+          "total": 15,
+          "scope_th": "ข้อความชุดทดลอง",
+          "basis_th": "15 ข้อความต้นเกมเท่านั้น; ไม่ใช่คลังทั้งเกมหรือการอนุมัติทั้งเกม",
+          "evidence_path": "games/gba/pokemon-emerald/docs/EMERALD_PREVIEW.md"
+        }
+      }
+    },
+    {
+      "id": "gba/pokemon-firered-reference",
+      "name": "Pokémon FireRed reference",
+      "platform": "GBA",
+      "status": "REFERENCE_REPRODUCTION_ONLY",
+      "status_th": "ยืนยันแพตช์อ้างอิง ยังไม่ใช่งานแปลใหม่ทั้งเกม",
+      "next_action_th": "ทำตัวอย่างแปลใหม่พร้อมหลักฐานฟอนต์และใส่กลับ",
+      "problems_th": "เป็นการสร้างแพตช์อ้างอิงซ้ำ ไม่ใช่งานแปลใหม่; ยังไม่มีคลังแปลใหม่ที่ตรวจแล้ว",
+      "audit_date": "2026-10-14",
+      "evidence_path": "tools/retrothai-workbench/prototypes/pixeltrans-v0.2/rom-audit/README_FOR_CODEX.md",
+      "full_game_translation_verified": false,
+      "evidence_summary_th": "ยืนยันแพตช์อ้างอิง ยังไม่ใช่งานแปลใหม่ทั้งเกม",
+      "progress": {
+        "overall": {
+          "completed": null,
+          "total": null,
+          "scope_th": "ทั้งเกม",
+          "basis_th": "ยังไม่มีจำนวนรวมและการตรวจครอบคลุมทั้งเกม; ไม่คำนวณจากค่าเฉลี่ยของ pilot",
+          "evidence_path": "tools/retrothai-workbench/prototypes/pixeltrans-v0.2/rom-audit/README_FOR_CODEX.md"
+        },
+        "patch": {
+          "completed": 1,
+          "total": 1,
+          "scope_th": "สร้างแพตช์อ้างอิงซ้ำ",
+          "basis_th": "สร้างเป้าหมายอ้างอิงจากต้นฉบับตรงรุ่นได้ 1/1; ไม่ใช่เปอร์เซ็นต์แพตช์ไทยใหม่ทั้งเกม",
+          "evidence_path": "tools/retrothai-workbench/prototypes/pixeltrans-v0.2/rom-audit/README_FOR_CODEX.md"
+        },
+        "translation": {
+          "completed": null,
+          "total": null,
+          "scope_th": "คลังข้อความทั้งเกม",
+          "basis_th": "ยังไม่มีคู่จำนวนแปลและจำนวนที่ต้องแปลครบในขอบเขตเดียวกัน",
+          "evidence_path": "tools/retrothai-workbench/prototypes/pixeltrans-v0.2/rom-audit/README_FOR_CODEX.md"
+        }
+      }
+    },
+    {
+      "id": "gb/pokemon-yellow",
+      "name": "Pokémon Yellow",
+      "platform": "GB / GBC",
+      "status": "PARTIAL_CGB_ONLY",
+      "status_th": "แปลและทดสอบบางฉาก เฉพาะ CGB",
+      "next_action_th": "ตรวจบทสนทนาและการต่อสู้ถัดไปจากการเล่นจริง",
+      "problems_th": "ยังไม่ยืนยันการต่อสู้กับคู่แข่งและการเล่นครบ; DMG/SGB ยังไม่ตรวจ",
+      "audit_date": "2026-10-14",
+      "evidence_path": "games/gb/pokemon-yellow/docs/POKEYELLOW_V075_REAL_EMULATOR_QA.md",
+      "full_game_translation_verified": false,
+      "evidence_summary_th": "แปลและทดสอบบางฉาก เฉพาะ CGB",
+      "progress": {
+        "overall": {
+          "completed": null,
+          "total": null,
+          "scope_th": "ทั้งเกม",
+          "basis_th": "ยังไม่มีจำนวนรวมและการตรวจครอบคลุมทั้งเกม; ไม่คำนวณจากค่าเฉลี่ยของ pilot",
+          "evidence_path": "games/gb/pokemon-yellow/docs/POKEYELLOW_V075_REAL_EMULATOR_QA.md"
+        },
+        "patch": {
+          "completed": null,
+          "total": null,
+          "scope_th": "แพตช์ทั้งเกม",
+          "basis_th": "มีหลักฐานบางขั้นตอน แต่ไม่มีตัวหารงานแพตช์ทั้งเกมที่ตรวจแล้ว",
+          "evidence_path": "games/gb/pokemon-yellow/docs/POKEYELLOW_V075_REAL_EMULATOR_QA.md"
+        },
+        "translation": {
+          "completed": null,
+          "total": null,
+          "scope_th": "คลังข้อความทั้งเกม",
+          "basis_th": "ยังไม่มีคู่จำนวนแปลและจำนวนที่ต้องแปลครบในขอบเขตเดียวกัน",
+          "evidence_path": "games/gb/pokemon-yellow/docs/POKEYELLOW_V075_REAL_EMULATOR_QA.md"
+        }
+      }
+    },
+    {
+      "id": "sfc/ultimate-mortal-kombat-3",
+      "name": "Ultimate Mortal Kombat 3",
+      "platform": "SNES",
+      "status": "PARTIAL_STOCK_BOOT_ONLY",
+      "status_th": "ยืนยันบูตต้นฉบับ ยังไม่ยืนยันแพตช์ไทย M4",
+      "next_action_th": "ใช้แพตช์ส่วนตัวที่ตรงรุ่นแล้วจับภาพภาษาไทยจริง",
+      "problems_th": "หลักฐานบูตเป็นเกมต้นฉบับ; ยังไม่ยืนยันหน้าจอไทยของแพตช์ M4",
+      "audit_date": "2026-10-14",
+      "evidence_path": "games/sfc/ultimate-mortal-kombat-3/docs/SNES9X_BOOT_QA.md",
+      "full_game_translation_verified": false,
+      "evidence_summary_th": "ยืนยันบูตต้นฉบับ ยังไม่ยืนยันแพตช์ไทย M4",
+      "progress": {
+        "overall": {
+          "completed": null,
+          "total": null,
+          "scope_th": "ทั้งเกม",
+          "basis_th": "ยังไม่มีจำนวนรวมและการตรวจครอบคลุมทั้งเกม; ไม่คำนวณจากค่าเฉลี่ยของ pilot",
+          "evidence_path": "games/sfc/ultimate-mortal-kombat-3/docs/SNES9X_BOOT_QA.md"
+        },
+        "patch": {
+          "completed": null,
+          "total": null,
+          "scope_th": "แพตช์ทั้งเกม",
+          "basis_th": "มีหลักฐานบางขั้นตอน แต่ไม่มีตัวหารงานแพตช์ทั้งเกมที่ตรวจแล้ว",
+          "evidence_path": "games/sfc/ultimate-mortal-kombat-3/docs/SNES9X_BOOT_QA.md"
+        },
+        "translation": {
+          "completed": null,
+          "total": null,
+          "scope_th": "คลังข้อความทั้งเกม",
+          "basis_th": "ยังไม่มีคู่จำนวนแปลและจำนวนที่ต้องแปลครบในขอบเขตเดียวกัน",
+          "evidence_path": "games/sfc/ultimate-mortal-kombat-3/docs/SNES9X_BOOT_QA.md"
+        }
+      }
+    },
+    {
+      "id": "ps1/jackie-chan-stuntmaster",
+      "name": "Jackie Chan: Stuntmaster",
+      "platform": "PS1",
+      "status": "PARTIAL_CANDIDATE_V11",
+      "status_th": "v11: UI 137 + ซับ 103 ยังไม่ครบเกม",
+      "next_action_th": "ตรวจคำคาดเดา MAKING_047, ข้อความที่ยังไม่สำรวจ และเซฟ/โหลด",
+      "problems_th": "MAKING_047 เป็นคำคาดเดา; ยังไม่ตรวจเส้นเรื่องปกติทุก FMV และเซฟ/โหลด; คลังทั้งเกมไม่ครบ",
+      "audit_date": "2026-10-14",
+      "evidence_path": "games/ps1/jackie-chan-stuntmaster/CHECKPOINT.md",
+      "full_game_translation_verified": false,
+      "evidence_summary_th": "v11: UI 137 + ซับ 103 ยังไม่ครบเกม",
+      "progress": {
+        "overall": {
+          "completed": null,
+          "total": null,
+          "scope_th": "ทั้งเกม",
+          "basis_th": "ยังไม่มีจำนวนรวมและการตรวจครอบคลุมทั้งเกม; ไม่คำนวณจากค่าเฉลี่ยของ pilot",
+          "evidence_path": "games/ps1/jackie-chan-stuntmaster/CHECKPOINT.md"
+        },
+        "patch": {
+          "completed": 103,
+          "total": 103,
+          "scope_th": "ซับ FMV ชุดนี้",
+          "basis_th": "ฝัง 103 caption ใน 4 FMV; คำคาดเดา 1 รายการยังไม่ยืนยันเสียง และ 3 FMV ตรวจผ่าน QA alias ไม่ใช่เส้นเรื่องปกติ",
+          "evidence_path": "games/ps1/jackie-chan-stuntmaster/CHECKPOINT.md"
+        },
+        "translation": {
+          "completed": 137,
+          "total": 271,
+          "scope_th": "UI ที่มีร่างไทย",
+          "basis_th": "137 ร่างที่ review แล้วจาก UI 271 แถวที่สำรวจ; 134 คงไว้/รอจัดการ ไม่ใช่แปลขาดทั้งหมด; approved 0",
+          "evidence_path": "games/ps1/jackie-chan-stuntmaster/CHECKPOINT.md"
+        }
+      }
+    },
+    {
+      "id": "gba/fire-emblem-sacred-stones",
+      "name": "Fire Emblem: The Sacred Stones",
+      "platform": "GBA",
+      "status": "PILOT_BLOCKED",
+      "status_th": "ติดขัด: ใส่กลับผิด 71 รายการ และไทยกลายเป็น ?",
+      "next_action_th": "แก้ control codes และพิสูจน์ renderer ไทยก่อนแปลต่อ",
+      "problems_th": "ใส่กลับต้นฉบับผิด 71 รายการ; ไทยกลายเป็นเครื่องหมาย ?; renderer ไทยยังไม่ยืนยัน",
+      "audit_date": "2026-10-14",
+      "evidence_path": "tools/retrothai-workbench/docs/FE8_PILOT.md",
+      "full_game_translation_verified": false,
+      "evidence_summary_th": "ติดขัด: ใส่กลับผิด 71 รายการ และไทยกลายเป็น ?",
+      "progress": {
+        "overall": {
+          "completed": null,
+          "total": null,
+          "scope_th": "ทั้งเกม",
+          "basis_th": "ยังไม่มีจำนวนรวมและการตรวจครอบคลุมทั้งเกม; ไม่คำนวณจากค่าเฉลี่ยของ pilot",
+          "evidence_path": "tools/retrothai-workbench/docs/FE8_PILOT.md"
+        },
+        "patch": {
+          "completed": null,
+          "total": null,
+          "scope_th": "แพตช์ทั้งเกม",
+          "basis_th": "มีหลักฐานบางขั้นตอน แต่ไม่มีตัวหารงานแพตช์ทั้งเกมที่ตรวจแล้ว",
+          "evidence_path": "tools/retrothai-workbench/docs/FE8_PILOT.md"
+        },
+        "translation": {
+          "completed": null,
+          "total": null,
+          "scope_th": "คลังข้อความทั้งเกม",
+          "basis_th": "ยังไม่มีคู่จำนวนแปลและจำนวนที่ต้องแปลครบในขอบเขตเดียวกัน",
+          "evidence_path": "tools/retrothai-workbench/docs/FE8_PILOT.md"
+        }
+      }
+    },
+    {
+      "id": "homebrew/garden-fixture",
+      "name": "Garden synthetic fixture",
+      "platform": "Homebrew",
+      "status": "SYNTHETIC_PIPELINE_ONLY",
+      "status_th": "เกมทดสอบสังเคราะห์สำหรับ pipeline",
+      "next_action_th": "ใช้ตรวจการเปลี่ยนเครื่องมือ ไม่ใช่หลักฐานเกมเชิงพาณิชย์",
+      "problems_th": "เป็น fixture สังเคราะห์ ไม่ใช่ความคืบหน้าการแปลเกมเชิงพาณิชย์",
+      "audit_date": "2026-10-14",
+      "evidence_path": "engines/thairom-studio/fixtures/garden/text.json",
+      "full_game_translation_verified": false,
+      "evidence_summary_th": "เกมทดสอบสังเคราะห์สำหรับ pipeline",
+      "progress": {
+        "overall": {
+          "completed": null,
+          "total": null,
+          "scope_th": "ทั้งเกม",
+          "basis_th": "ยังไม่มีจำนวนรวมและการตรวจครอบคลุมทั้งเกม; ไม่คำนวณจากค่าเฉลี่ยของ pilot",
+          "evidence_path": "engines/thairom-studio/fixtures/garden/text.json"
+        },
+        "patch": {
+          "completed": null,
+          "total": null,
+          "scope_th": "แพตช์ทั้งเกม",
+          "basis_th": "มีหลักฐานบางขั้นตอน แต่ไม่มีตัวหารงานแพตช์ทั้งเกมที่ตรวจแล้ว",
+          "evidence_path": "engines/thairom-studio/fixtures/garden/text.json"
+        },
+        "translation": {
+          "completed": null,
+          "total": null,
+          "scope_th": "คลังข้อความทั้งเกม",
+          "basis_th": "ยังไม่มีคู่จำนวนแปลและจำนวนที่ต้องแปลครบในขอบเขตเดียวกัน",
+          "evidence_path": "engines/thairom-studio/fixtures/garden/text.json"
+        }
+      }
+    }
+  ],
+  "catalog_sha256": "9f1cb144288520c8f0597f036491fc8988be87e8a715d17725654855c119f7ff",
+  "source_commit": "4478e0c637b16b3965f0a13867de18f4d4caf0e8",
+  "source_updated_at": "2026-10-14T13:13:12+07:00",
+  "sync_interval_minutes": 5,
+  "snapshot_policy_th": "snapshot จาก GitHub main; sync Hub อัตโนมัติรออนุมัติสิทธิ์อ่าน repo ส่วนตัว เว็บตรวจ snapshot ใหม่ทุก 60 วินาที",
+  "metrics_policy_th": "เปอร์เซ็นต์เฉพาะชุดที่ระบุ ไม่ใช่ทั้งเกม ร่างแปลไม่ใช่การอนุมัติ — หมายถึงไม่มีตัวหารที่ตรวจแล้ว ไม่ใช่ 0%",
+  "sync_active": false,
+  "sync_state_th": "snapshot ปัจจุบัน · sync อัตโนมัติรออนุมัติสิทธิ์อ่าน Hub"
+}

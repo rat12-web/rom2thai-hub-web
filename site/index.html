@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="ติดตามงานแปลและแพตช์ไทยจาก ROM2THAI Hub พร้อมขอบเขตและหลักฐานรายเกม">
+  <title>ROM2THAI · Project Hub</title>
+  <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="readability.css"><script src="app.js" defer></script>
+</head>
+<body>
+<aside class="sidebar">
+  <a class="brand" href="#"><span class="brandmark">R<span>๒</span></span><span>ROM2THAI<small>STUDIO / PROJECT HUB</small></span></a>
+  <div class="side-label">WORKSPACE</div>
+  <a class="nav active" href="#projects"><span>▦</span> ภาพรวมงาน <b>09</b></a>
+  <a class="nav" href="https://github.com/rat12-web/thai-rom-cloud" target="_blank" rel="noopener"><span>↗</span> เปิด GitHub Hub</a>
+  <a class="nav" href="https://github.com/rat12-web/thai-rom-cloud/blob/main/shared/tooling/TOOLKIT_STATUS.md" target="_blank" rel="noopener"><span>⚒</span> เครื่องมือและผลทดสอบ</a>
+  <div class="side-bottom"><span class="live-dot"></span> ฐานกลาง: main<p>ข้อมูลสถานะเท่านั้น<br>ไฟล์เกมเก็บบนเครื่องเจ้าของ</p><code>rat12-web/thai-rom-cloud</code></div>
+</aside>
+<main>
+  <header class="topbar"><span class="breadcrumb">Workspace <span>/</span> ภาพรวมงาน</span><a class="repo-link" href="https://github.com/rat12-web/thai-rom-cloud" target="_blank" rel="noopener">GitHub ↗</a></header>
+  <section class="intro"><div><div class="eyebrow">LOCALIZATION WORKSPACE</div><h1>ทุกเกม ทุกขั้นตอน<span>.</span></h1><p>ติดตามงานแพตช์ไทย จากหลักฐานที่ตรวจย้อนกลับได้</p></div><div class="snapshot"><span class="live-dot"></span> <span>SNAPSHOT <b id="audit-date">กำลังโหลด</b></span></div></section>
+  <section class="stats" aria-label="ภาพรวม"><div class="stat"><span>เกมใน Hub</span><strong id="game-count">—</strong><small>ไม่รวมเกมทดสอบสังเคราะห์</small></div><div class="stat"><span>งานทดลอง / งานบางส่วน</span><strong id="partial-count">—</strong><small>มีงานแปลหรือหลักฐานบางขั้นตอน</small></div><div class="stat warning"><span>งานที่ติดขัด</span><strong id="blocked-count">—</strong><small>ต้องแก้ปัญหาก่อนเดินหน้าต่อ</small></div><div class="stat"><span>ยืนยันครบทั้งเกม</span><strong id="complete-count">—</strong><small>ผ่านการตรวจทั้งเกมแล้ว</small></div></section>
+  <section class="explanation"><div class="info-icon">i</div><div><strong>อ่านเปอร์เซ็นต์ให้ตรงกับขอบเขต</strong><p>แถบสีแสดงความคืบหน้าเฉพาะชุดที่ระบุ เช่น ชุดทดลองหรือคลังที่สำรวจแล้ว ส่วน “โดยรวม” นับทั้งเกมและจะแสดง — จนมีจำนวนรวมที่ตรวจสอบแล้ว ร่างแปลยังไม่ใช่คำแปลที่อนุมัติ</p></div></section>
+  <p id="sync-note" class="sync-note" aria-live="polite">กำลังตรวจข้อมูลจาก GitHub…</p>
+  <section class="workspace" id="projects"><div class="section-head"><div><h2>สถานะรายเกม <span id="result-count"></span></h2><p>เลือกเกมเพื่อดูตัวเลข ขอบเขต และหลักฐาน</p></div><button class="button subtle" id="export">↓ ส่งออก CSV</button></div>
+  <div class="toolbar"><label class="search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="ค้นหาชื่อเกม หรือปัญหา…" aria-label="ค้นหาเกม"></label><select id="status-filter" aria-label="กรองสถานะ"><option value="all">ทุกสถานะ</option><option value="partial">งานบางส่วน</option><option value="blocked">ติดขัด</option><option value="reference">งานอ้างอิง</option><option value="fixture">เกมทดสอบ</option></select><div class="view-switch" role="group" aria-label="รูปแบบการแสดง"><button id="cards-view" aria-pressed="true" title="มุมมองการ์ด">▦ <span>การ์ด</span></button><button id="table-view" aria-pressed="false" title="มุมมองตาราง">☷ <span>ตาราง</span></button></div></div>
+  <div class="filter-row"><div class="platforms" id="platforms" role="group" aria-label="กรองเครื่องเกม"></div><label class="fixture-toggle"><input id="include-fixture" type="checkbox"> รวมเกมทดสอบ</label></div>
+  <div id="results" aria-live="polite"></div><div id="empty" hidden>ไม่พบเกมในตัวกรองนี้ <button id="reset" class="button">ล้างตัวกรอง</button></div>
+  </section>
+  <footer><span>ROM2THAI STUDIO <span class="footer-sep">/</span> หลักฐานก่อนความครบ</span><button class="text-button" id="data-info">ข้อมูลและการอัปเดต ↗</button></footer>
+</main>
+<dialog id="details" aria-labelledby="detail-title"><div class="dialog-head"><span class="eyebrow">PROJECT DETAILS</span><button class="close" aria-label="ปิดรายละเอียด">×</button></div><div id="detail-content"></div></dialog>
+<noscript>เปิด JavaScript เพื่อใช้ dashboard หรือดู <a href="https://github.com/rat12-web/thai-rom-cloud/blob/main/docs/PROJECT_STATUS.md">ตารางสถานะใน GitHub</a></noscript>
+</body></html>
