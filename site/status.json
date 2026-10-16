@@ -366,8 +366,8 @@
     }
   ],
   "catalog_sha256": "324f554a70e5dae65d4bb8a2d6c81b55964b2f959f3f0855f862399f84b45664",
-  "source_commit": "b43c44b451a64a6b6304a68e18a08b6d03ce5877",
-  "source_updated_at": "2026-10-14T15:34:30+07:00",
+  "source_commit": "30ceb941d182ed279302e45ab2437987dfabda5d",
+  "source_updated_at": "2026-10-16T00:08:29-04:00",
   "sync_interval_minutes": 5,
   "snapshot_policy_th": "ซิงก์จาก GitHub main ทุก 5 นาทีเมื่อมีข้อมูลเปลี่ยน; อาจล่าช้าตามคิว GitHub Actions เว็บตรวจข้อมูลใหม่ทุก 60 วินาทีขณะเปิด",
   "metrics_policy_th": "เปอร์เซ็นต์เฉพาะชุดที่ระบุ ไม่ใช่ทั้งเกม ร่างแปลไม่ใช่การอนุมัติ — หมายถึงไม่มีตัวหารที่ตรวจแล้ว ไม่ใช่ 0%",
