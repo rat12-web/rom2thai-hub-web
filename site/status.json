@@ -399,11 +399,47 @@
           "evidence_path": "engines/thairom-studio/fixtures/garden/text.json"
         }
       }
+    },
+    {
+      "id": "gba/harvest-moon-more-friends-of-mineral-town",
+      "name": "Harvest Moon: More Friends of Mineral Town (Thai translation, from scratch)",
+      "platform": "GBA",
+      "status": "TEXT_PIPELINE_VERIFIED_FONT_NOT_LOCATED",
+      "status_th": "ท่อส่งข้อความเสร็จและพิสูจน์ในเกมแล้ว (dump → rebuild → repoint → verify) แต่ยังไม่พบที่อยู่ฟอนต์ใน ROM จึงยังไม่มีข้อความไทยในเกมแม้แต่ข้อความเดียว",
+      "next_action_th": "หาแหล่งฟอนต์ให้เจอ (ตามรอยการอัปโหลดไกลฟ์ขึ้น VRAM แล้วสแกนหา LZ77/ฟอนต์บีบอัด) จากนั้นสร้างฟอนต์ไทยแบบประกอบสระ/วรรณยุกต์ล่วงหน้าแล้วเริ่มแปล 11,112 ข้อความ",
+      "problems_th": "ยังไม่พบฟอนต์ใน ROM: ค้นแบบ 1/2/4bpp ทุกการเรียง/ทิศ/ทิศทางบิตและทุกตำแหน่งแล้วไม่เจอ, ไม่มีบล็อกฟอนต์ต่อเนื่องใน ROM (เจอแต่กราฟิกเส้นแนวตั้ง), ไม่มีสำเนาไกลฟ์ใน VRAM ต่อเนื่องใน ROM; งานแปลยังเป็น 0/11,112; ทดสอบในเกมแค่ฉากเปิดกับหน้าใส่ชื่อ/วันเกิด ไม่ได้ทดสอบเมนู การโหลดเซฟ หรือเล่นจบ",
+      "audit_date": "2026-10-17",
+      "evidence_path": "games/gba/harvest-moon-more-friends-of-mineral-town/docs/EVIDENCE.md",
+      "full_game_translation_verified": false,
+      "evidence_summary_th": "ท่อส่งข้อความเสร็จและพิสูจน์ในเกมแล้ว (dump → rebuild → repoint → verify) แต่ยังไม่พบที่อยู่ฟอนต์ใน ROM จึงยังไม่มีข้อความไทยในเกมแม้แต่ข้อความเดียว",
+      "progress": {
+        "overall": {
+          "completed": null,
+          "total": null,
+          "scope_th": "ทั้งเกม",
+          "basis_th": "ยังไม่มีตัวหารที่ตรวจครอบคลุมทั้งเกม; วัดได้เฉพาะจำนวนข้อความจริงจาก dump (11,112 ข้อความ) ไม่ใช่ความคืบหน้าทั้งเกม",
+          "evidence_path": "games/gba/harvest-moon-more-friends-of-mineral-town/docs/COVERAGE.md"
+        },
+        "patch": {
+          "completed": 0,
+          "total": 1,
+          "scope_th": "แพตช์ไทยทั้งเกม",
+          "basis_th": "ยังไม่มีแพตช์ไทย; พิสูจน์แล้วเฉพาะท่อส่งข้อความ (แก้ 1 ข้อความให้ยาวขึ้น, จัดเรียงใหม่, เขียน pointer table และ checksum) แล้วเห็นผลจริงในอีมูเลเตอร์",
+          "evidence_path": "games/gba/harvest-moon-more-friends-of-mineral-town/docs/EVIDENCE.md"
+        },
+        "translation": {
+          "completed": 0,
+          "total": 11112,
+          "scope_th": "ข้อความทั้งเกม (ตัวหารจาก dump: 11,112 ข้อความ ใน 1,415 บล็อก)",
+          "basis_th": "นับจากดัชนีข้อความที่แยกได้ครบทั้งหมด; ยังไม่มีข้อความใดถูกแปลเป็นไทย (0/11,112)",
+          "evidence_path": "games/gba/harvest-moon-more-friends-of-mineral-town/docs/COVERAGE.md"
+        }
+      }
     }
   ],
-  "catalog_sha256": "4988e528c9b11df26c2f93e15bd3e2d3a568f759830fc3d89b9364781a53876c",
-  "source_commit": "f8bc3dfd838ff2143d6d3121f14c5cd41e32651a",
-  "source_updated_at": "2026-10-17T15:40:50+07:00",
+  "catalog_sha256": "c52815580c4d536aa3a302b8158dae734af9caefd2a8fc9a07c0345e071ff471",
+  "source_commit": "6a2380d488d7c6632bb8ea3fb0575be366c22544",
+  "source_updated_at": "2026-10-17T17:09:30+07:00",
   "sync_interval_minutes": 5,
   "snapshot_policy_th": "ซิงก์จาก GitHub main ทุก 5 นาทีเมื่อมีข้อมูลเปลี่ยน; อาจล่าช้าตามคิว GitHub Actions เว็บตรวจข้อมูลใหม่ทุก 60 วินาทีขณะเปิด",
   "metrics_policy_th": "เปอร์เซ็นต์เฉพาะชุดที่ระบุ ไม่ใช่ทั้งเกม ร่างแปลไม่ใช่การอนุมัติ — หมายถึงไม่มีตัวหารที่ตรวจแล้ว ไม่ใช่ 0%",
