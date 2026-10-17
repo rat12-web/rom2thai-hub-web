@@ -185,6 +185,42 @@
       }
     },
     {
+      "id": "gba/castlevania-aria-of-sorrow",
+      "name": "Castlevania: Aria of Sorrow (Thai build study)",
+      "platform": "GBA",
+      "status": "REFERENCE_STUDY_VERIFIED_REPRODUCTION",
+      "status_th": "ศึกษาตัวอย่างไทยของ NONPLAE: สร้างซ้ำได้ตรงไบต์และถอดระบบฟอนต์/ข้อความครบแล้ว; ยังไม่มีงานแปลใหม่ของ hub",
+      "next_action_th": "ทำตารางจับคู่กลุ่มอักษรไทย→คู่ไกลฟ์ แล้วใส่คำแปลชื่อ/เมนูที่เหลือ 480 รายการและตรวจในอีมูเลเตอร์",
+      "problems_th": "ฟอนต์ที่แจกเป็น subset 385 คู่; ยังไม่มี charmap จึงยังแปลเพิ่มไม่ได้; ชื่อทั้งหมดยังอังกฤษ; ยังไม่เล่นจบและยังไม่ทดสอบโหลดเซฟ",
+      "audit_date": "2026-10-17",
+      "evidence_path": "games/gba/castlevania-aria-of-sorrow/docs/EVIDENCE.md",
+      "full_game_translation_verified": false,
+      "evidence_summary_th": "ศึกษาตัวอย่างไทยของ NONPLAE: สร้างซ้ำได้ตรงไบต์และถอดระบบฟอนต์/ข้อความครบแล้ว; ยังไม่มีงานแปลใหม่ของ hub",
+      "progress": {
+        "overall": {
+          "completed": null,
+          "total": null,
+          "scope_th": "ทั้งเกม",
+          "basis_th": "ยังไม่มีจำนวนรวมและการตรวจครอบคลุมทั้งเกม; ไม่คำนวณจากค่าเฉลี่ยของ pilot",
+          "evidence_path": "games/gba/castlevania-aria-of-sorrow/docs/COVERAGE.md"
+        },
+        "patch": {
+          "completed": 1,
+          "total": 1,
+          "scope_th": "สร้างแพตช์อ้างอิงซ้ำ",
+          "basis_th": "สร้างเป้าหมายอ้างอิงจากต้นฉบับตรงรุ่นได้ 1/1 พร้อมตรวจแฮชและ hook 7/7; ไม่ใช่เปอร์เซ็นต์แพตช์ไทยใหม่ทั้งเกม",
+          "evidence_path": "games/gba/castlevania-aria-of-sorrow/docs/EVIDENCE.md"
+        },
+        "translation": {
+          "completed": null,
+          "total": null,
+          "scope_th": "งานแปลของ hub",
+          "basis_th": "แพตช์อ้างอิงมีข้อความไทย 484 จาก 964 ช่องภาษาอังกฤษอยู่แล้ว แต่เป็นผลงานของ NONPLAE ไม่ใช่งานแปลของ hub จึงไม่นับเป็นความคืบหน้าการแปลของเรา",
+          "evidence_path": "games/gba/castlevania-aria-of-sorrow/docs/COVERAGE.md"
+        }
+      }
+    },
+    {
       "id": "gb/pokemon-yellow",
       "name": "Pokémon Yellow",
       "platform": "GB / GBC",
@@ -365,9 +401,9 @@
       }
     }
   ],
-  "catalog_sha256": "324f554a70e5dae65d4bb8a2d6c81b55964b2f959f3f0855f862399f84b45664",
-  "source_commit": "a2bebddf7298a30e9bd4baf1b95c4c5dad953dd2",
-  "source_updated_at": "2026-10-16T02:51:04-04:00",
+  "catalog_sha256": "4988e528c9b11df26c2f93e15bd3e2d3a568f759830fc3d89b9364781a53876c",
+  "source_commit": "f8bc3dfd838ff2143d6d3121f14c5cd41e32651a",
+  "source_updated_at": "2026-10-17T15:40:50+07:00",
   "sync_interval_minutes": 5,
   "snapshot_policy_th": "ซิงก์จาก GitHub main ทุก 5 นาทีเมื่อมีข้อมูลเปลี่ยน; อาจล่าช้าตามคิว GitHub Actions เว็บตรวจข้อมูลใหม่ทุก 60 วินาทีขณะเปิด",
   "metrics_policy_th": "เปอร์เซ็นต์เฉพาะชุดที่ระบุ ไม่ใช่ทั้งเกม ร่างแปลไม่ใช่การอนุมัติ — หมายถึงไม่มีตัวหารที่ตรวจแล้ว ไม่ใช่ 0%",
