@@ -1,6 +1,6 @@
 {
-  "week": "2026-W42",
-  "verified_at": "2026-10-14T06:27:56.705027+00:00",
-  "source_commit": "88379ca35a45d741659e562ebab285f0d84391fc",
+  "week": "2026-W43",
+  "verified_at": "2026-10-19T01:34:50.527292+00:00",
+  "source_commit": "6a2380d488d7c6632bb8ea3fb0575be366c22544",
   "reason": "Successful read/export; weekly activity prevents idle schedule expiry"
 }
